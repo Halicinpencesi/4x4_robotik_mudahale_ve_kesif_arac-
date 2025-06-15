@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>4x4 Robotik Müdahale ve Keşif Aracı</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 25px 30px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease-out;
+      position: relative;
+      z-index: 1;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h1, h2 {
+      color: #001bc3;
+      margin-top: 0;
+    }
+    h3 {
+      margin-bottom: 5px;
+      color: #001bc3;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #222;
+    }
+    img.content-img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      position: relative;
+      z-index: 2;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    a.unilink img.unilogo {
+      display: block;
+      width: 220px;
+      height: auto;
+      margin-top: 15px;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      border-radius: 0;
+      box-shadow: none;
+      transition: none;
+    }
+    a.unilink img.unilogo:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .logo {
+      text-align: center;
+      padding: 25px 0;
+    }
+    .logo img {
+      max-width: 250px; /* LOGO genişliği */
+      border-radius: 0;
+      box-shadow: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #e0eaff;
+      color: 001bc3;
+    }
+    tfoot td {
+      font-weight: bold;
+      background-color: #d0d8ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background-color:#001bc3 padding:15px 30px; color:#fff; display:flex; flex-wrap: wrap; align-items:center; font-weight:bold; font-size:1rem;">
+  <div class="logo" style="margin-right: 20px;">
+    <img src="img/logo2.webp" alt="Logo" style="height:40px;">
+  </div>
+  <nav style="display:flex; flex-wrap: wrap; gap: 10px; align-items:center;">
+    <a href="#ekip" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Ekip</a>
+    <a href="#robotik" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">4x4 Robotik</a>
+    <a href="#amac" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Amaç & Katkılar</a>
+    <a href="#sonuc" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Sonuç & Etki</a>
+    <a href="#teknoloji" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Teknolojiler</a>
+    <a href="#foto" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Fotoğraflar</a>
+    <a href="#juri" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Jüri</a>
+    <a href="#uni" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Üniversite</a>
+    <a href="#ozgecmis" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Özgeçmiş</a>
+    <a href="#tesekkur" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">Teşekkür</a>
+    <a href="#iletisim" style="color:#fff; text-decoration:none; padding: 8px 12px; border-right: 1px solid rgba(255,255,255,0.5);">İletişim</a>
+    <a href="#tarih" style="color:#fff; text-decoration:none; padding: 8px 12px;">Tarih</a>
+  </nav>
+</header>
+
+
+
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="img/logo.webp" alt="Logo" />
+  </div>
+
+  <!-- Ekip Üyeleri -->
+  <section id="ekip">
+    <h2>Ekip Üyeleri</h2>
+    <p>Fatih Mehmet ÖZÇELİK<br />Selman AKÇA</p>
+  </section>
+
+  <!-- 4x4 Robotik Müdahale ve Keşif Aracı -->
+  <section id="robotik">
+    <h1>4x4 Robotik Müdahale ve Keşif Aracı</h1>
+    <p>
+      Bu proje, zorlu arazi koşullarında ve tehlikeli ortamlarda görev yapabilecek, uzaktan kontrol edilebilen 4x4 hareket kabiliyetine sahip bir robotik müdahale ve keşif aracı tasarlamayı ve üretmeyi amaçlamaktadır. Araç, robot kolu, Wi-Fi kamera ve anons hoparlörleri ile donatılmıştır. Operatör, tehlikeli bölgelere yaklaşmadan keşif ve müdahale gerçekleştirebilir.
+    </p>
+    <p>
+      Proje kapsamında kullanılan ileri teknoloji sensörler ve haberleşme sistemleri sayesinde, araç gerçek zamanlı görüntü aktarımı ve müdahale imkânı sunar. Zorlu arazi şartlarında yüksek hareket kabiliyeti ve dayanıklılığı ile dikkat çeker.
+    </p>
+    <img class="content-img" src="img/foto1.png" alt="Robot Aracı Fotoğrafı" width="600" height="400" />
+  </section>
+
+  <!-- Proje Amacı ve Katkıları -->
+  <section id="amac">
+    <h2>Proje Amacı ve Katkıları</h2>
+    <p>
+      Bu proje, güvenlik ve afet yönetimi gibi kritik alanlarda insansız araçların kullanımını artırmayı hedeflemektedir. Araç, zorlu koşullarda güvenilir ve hızlı müdahale imkanı sunarak insan hayatını koruma ve riskleri azaltma konusunda önemli katkılar sağlamaktadır.
+    </p>
+  </section>
+
+  <!-- Proje Sonuçları ve Beklenen Etkiler -->
+  <section id="sonuc">
+  <h2>Proje Sonuçları ve Beklenen Etkiler</h2>
+  <p>
+    Geliştirilen 4x4 Robotik Müdahale ve Keşif Aracı, zorlu arazi koşullarında yüksek manevra kabiliyeti ve stabilite sağlayarak keşif ve müdahale operasyonlarında etkinlik kazandırmıştır. Uzaktan kontrol sistemleri ve entegre kamera modülü sayesinde, tehlikeli bölgelerde insan müdahalesine gerek kalmadan gerçek zamanlı veri aktarımı sağlanmıştır. Bu sayede afet ve güvenlik senaryolarında riskler minimize edilmiş, operasyon süreleri kısaltılmıştır. Ayrıca, modüler yapısı ve açık kaynak donanım kullanımı, ileride yapılacak geliştirmeler ve farklı görevler için adaptasyon kolaylığı sunmaktadır.
+  </p>
+  <p>
+    Proje kapsamında kullanılan gömülü sistemler ve robotik kollar, endüstriyel uygulamalarda da referans teşkil ederek teknoloji transferine zemin hazırlamıştır. Bu çalışma, yerel üniversite-sanayi iş birlikleri ve Ar-Ge kültürünün gelişimine katkı sağlayarak, robotik ve otomasyon alanında eğitim ve araştırma faaliyetlerinin yaygınlaşmasına olanak tanımıştır.
+  </p>
+</section>
+
+  <section id="teknoloji">
+  <section>
+    <h2>Kullanılan Teknolojiler</h2>
+    <p>
+      Araçta ESP32 tabanlı Wi-Fi kamera sistemi kullanılarak gerçek zamanlı yüksek çözünürlüklü görüntü aktarımı sağlanmaktadır. Arduino kontrollü robot kolu ile hassas ve programlanabilir müdahaleler yapılabilmektedir. 4x4 tahrik sistemi sayesinde araç, zorlu arazi koşullarında yüksek hareket kabiliyeti ve dayanıklılık göstermektedir.
+    </p>
+    <p>
+      Kablosuz haberleşme protokolleri aracılığıyla operatör, araçla kesintisiz iletişim kurabilir ve çevresel verileri anlık olarak izleyebilir. Ayrıca entegre sensörler sayesinde aracın konumu, hızı ve durum bilgileri güvenilir şekilde takip edilmektedir.
+    </p>
+
+     <h2>Alıcı Bileşen/Malzeme Listesi</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Malzeme</th>
+        <th>Adet (Birim)</th>
+        <th>Fiyat (TL)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>ESP32 Wi-Fi Modül / Antenli</td><td>1</td><td>300 TL</td></tr>
+      <tr><td>4 Kanal 5V Röle</td><td>1</td><td>95 TL</td></tr>
+      <tr><td>XL 4015 5 Amper DC/DC Voltaj Regülatörü</td><td>1</td><td>105 TL</td></tr>
+      <tr><td>XL 4015 5 Amper DC/DC Display Voltaj Regülatörü</td><td>1</td><td>105 TL</td></tr>
+      <tr><td>24 AWG Kablolar</td><td>1</td><td>400 TL</td></tr>
+      <tr><td>Dişi ve Erkek Header</td><td>-</td><td>70 TL</td></tr>
+      <tr><td>Makaron Kablo</td><td>-</td><td>100 TL</td></tr>
+      <tr><td>25mm 600 RPM DC Motor</td><td>4</td><td>940 TL</td></tr>
+      <tr><td>M2 - M2,5 - M3 Vidalar ve Somunlar</td><td>-</td><td>300 TL</td></tr>
+      <tr><td>1.5mm 30x100cm Alüminyum (Araç Şasesi)</td><td>1</td><td>500 TL</td></tr>
+      <tr><td>Arazi Aracı Tekerlek ve Bağlantı Kaplinleri</td><td>4</td><td>2280 TL</td></tr>
+      <tr><td>MG996R Servo Motor</td><td>3</td><td>925 TL</td></tr>
+      <tr><td>MG90S Servo Motor</td><td>2</td><td>210 TL</td></tr>
+      <tr><td>1,75mm PLA Filament / Robot Kol Baskısı</td><td>1</td><td>250 TL</td></tr>
+      <tr><td>LM7805 Regülatör - AMS 1117 Regülatör</td><td>1 - 1</td><td>30 TL</td></tr>
+      <tr><td>ESP32 Cam</td><td>1</td><td>400 TL</td></tr>
+      <tr><td>L298N Motor Sürücü</td><td>1</td><td>100 TL</td></tr>
+      <tr><td>Lityum - Polimer Batarya 3,7V 5 Hücre ve XT40 Konnektörler</td><td>1</td><td>6000 TL</td></tr>
+      <tr><td>Delikli Pertinaks / Bakırlı</td><td>1</td><td>175 TL</td></tr>
+      <tr><td>Dişi Jak - Mini Anahtar</td><td>2 - 3</td><td>35 TL</td></tr>
+      <tr><td>5v Mini Lazer</td><td>1</td><td>30 TL</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Verici Kumanda Bileşen/Malzeme Listesi</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Malzeme</th>
+        <th>Adet (Birim)</th>
+        <th>Toplam Fiyat (TL)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>ESP32 Wi-Fi Modül</td><td>1</td><td>220 TL</td></tr>
+      <tr><td>Joystick 2 Eksen</td><td>3</td><td>75 TL</td></tr>
+      <tr><td>Push Buton / Renkli</td><td>6</td><td>60 TL</td></tr>
+      <tr><td>Li-on 18650 Pil</td><td>1</td><td>250 TL</td></tr>
+      <tr><td>LM7805 Regülatör</td><td>1</td><td>10 TL</td></tr>
+      <tr><td>AMS 1117 Regülatör</td><td>1</td><td>20 TL</td></tr>
+      <tr><td>1,75mm PLA Filament / Verici Kumanda Baskısı</td><td>1</td><td>200 TL</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"><center>Toplam Maliyet Fiyatı</center></td>
+        <td>14,185 TL</td>
+      </tr>
+    </tfoot>
+  </table>
+  </section>
+
+  <!-- Ek Fotoğraflar -->
+<section id="foto">
+  <h2>Ek Fotoğraflar</h2>
+  <div style="font-weight: bold; color: #001bc3; text-align: left; margin-bottom: 5px;">
+    4x4 Aracın Genel Görünümü
+  </div>
+  <img class="content-img" src="img/foto2.png" alt="Fotoğraf 2" width="600" height="400" />
+  <div style="font-weight: bold; color: #001bc3; text-align: left; margin-bottom: 5px;">
+    Robotik Kol Genel Görünümü
+  </div>
+  <img class="content-img" src="img/foto3.png" alt="Fotoğraf 3" width="600" height="400" />
+  <div style="font-weight: bold; color: #001bc3; text-align: left; margin-bottom: 5px;">
+    Kumanda Görünümü
+  </div>
+  <img class="content-img" src="img/foto4.png" alt="Fotoğraf 4" width="600" height="400" />
+</section>
+
+  <!-- Jüri Üyeleri -->
+  <section id="juri">
+  <h2>Jüri Üyeleri</h2>
+  <p>
+    <a href="https://akademik.halic.edu.tr/sayfalar/12734.aspx" target="_blank" rel="noopener noreferrer">Öğr. Gör. Erdem ŞANLI</a><br />
+    <a href="https://akademik.halic.edu.tr/sayfalar/9745.aspx" target="_blank" rel="noopener noreferrer">Dr. Öğr. Üyesi Fatma KOSOVALI ÇAVUŞ</a><br />
+    <a href="https://akademik.halic.edu.tr/sayfalar/15997.aspx" target="_blank" rel="noopener noreferrer">Öğr. Gör. İrfan ERDEM</a>
+  </p>
+</section>
+
+  <!-- Üniversite -->
+  <section id="uni">
+    <h2>Üniversite</h2>
+    <p>T.C. Haliç Üniversitesi Meslek Yüksekokulu Elektronik Teknolojisi Bölümü</p>
+    <a href="https://www.halic.edu.tr" target="_blank" class="unilink">
+      <img class="unilogo" src="img/unilogo.png" alt="Üniversite Logosu" width="220" />
+    </a>
+  </section>
+
+  <!-- Özgeçmiş -->
+  <section id="ozgecmis">
+  <h1>Özgeçmiş</h1>
+  <h3>Fatih Mehmet ÖZÇELİK</h3>
+  <p>
+    2005 yılında İstanbul’da doğdu. İlköğrenimini Atışalanı İlkokulu’nda, ortaöğrenimini Atışalanı Ortaokulu’nda tamamladı. Lise eğitimini Özel İkitelli OSB Mesleki ve Teknik Anadolu Lisesi’nde tamamladı. Haliç Üniversitesi Meslek Yüksekokulu Elektronik Teknolojisi Bölümü’nde öğrenimine devam etmektedir. Elektronik sistemler, haberleşme teknolojileri, robotik teknolojiler ve mikrodenetleyici tabanlı projeler üzerine çalışmalar yapmaktadır.
+  </p>
+  <h3>Selman AKÇA</h3>
+  <p>
+    2005 yılında İstanbul’da doğdu. İlköğrenimini Tahsin Banguoğlu İlkokulu’nda, ortaöğrenimini TOKİ İmam Hatip Ortaokulu’nda tamamladı. Lise eğitimini Ayhan Arı Borsa İstanbul Mesleki ve Teknik Anadolu Lisesi’nde tamamladı. Haliç Üniversitesi Meslek Yüksekokulu Elektronik Teknolojisi Bölümü’nde öğrenimine devam etmektedir. Robotik sistemler, mikrodenetleyici tabanlı ve elektronik devreler konularına ilgi duymaktadır.
+  </p>
+  <p>- İki öğrenci de “4x4 Robotik Müdahale ve Keşif Aracı” başlıklı bitirme projesi kapsamında birlikte çalışarak, teorik bilgilerini uygulamalı bir projede hayata geçirmiştir.</p>
+
+</section>
+
+<!-- Teşekkür -->
+<section id="tesekkur">
+  <h2>Teşekkür</h2>
+  <p>
+    Bu projenin gerçekleştirilmesinde bilgi ve deneyimlerini bizlerle paylaşan danışmanımız Öğr. Gör. Erdem ŞANLI’ya, değerli jüri üyelerimiz Dr. Öğr. Üyesi Fatma KOSOVALI ÇAVUŞ ve Öğr. Gör. İrfan ERDEM’e teşekkürü borç biliriz.
+  </p>
+</section>
+
+
+<!-- Geri Bildirim / İletişim Formu -->
+<section id="iletisim">
+  <h2>İletişim</h2>
+  <form action="mailto:halicinpencesi@gmail.com" method="post" enctype="text/plain">
+    <label for="name">İsminiz:</label><br />
+    <input type="text" id="name" name="İsim" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+    <label for="email">E-postanız:</label><br />
+    <input type="email" id="email" name="E-posta" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+    <label for="message">Mesajınız:</label><br />
+    <textarea id="message" name="Mesaj" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br />
+
+    <button type="submit" style="padding: 10px 20px; background-color: #001bc3; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Maili Gönder
+    </button>
+  </form>
+</section>
+
+
+  <!-- Tarih -->
+  <section id="tarih">
+    <h2>Tarih</h2>
+    <p>İstanbul - 2025</p>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+      sections.forEach((sec) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add("visible");
+        }
+      });
+    });
+
+    window.dispatchEvent(new Event("scroll"));
+  </script>
+
+<button id="scrollTopBtn" title="Yukarı Çık">↑ Yukarı Çık</button>
+
+<!-- Yukarı Çıkma Butonu -->
+<style>
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #001bc3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.5);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  #scrollTopBtn:hover {
+    background-color: #001bc3;
+  }
+</style>
+
+<script>
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+</body>
+</html>
